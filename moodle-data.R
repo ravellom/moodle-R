@@ -7,7 +7,11 @@ library(lubridate)
 library(tidyverse)
 
 # Cargar solo un fichero
-mdl01 <- read.csv("D:/Databases/moodle/10.02.logs_20210223-10.02.csv")
+mdl <- read.csv("D:/Databases/moodle/27.04.21.csv",  
+                encoding = "UTF-8")
+                #encoding = "ISO-8859-1")
+colnames(mdl) <- c("Hora", "Nombre_usuario", "Usuario_afectado",
+                   "Contexto")
 
 #### LEER varios csv de un directorio
 mdl <-
